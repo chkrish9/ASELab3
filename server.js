@@ -31,10 +31,5 @@ app.set('io', io);
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-//Required for navigating angular routes without server routes
-app.all('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './dist/index.html'));
-});
-
 
 server.listen(port);
